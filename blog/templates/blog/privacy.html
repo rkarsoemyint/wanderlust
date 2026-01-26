@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .privacy-container {
+        max-width: 900px;
+        margin: 40px auto;
+    }
+    .privacy-card {
+        border: none;
+        border-radius: 20px;
+        background-color: white;
+    }
+    .privacy-header {
+        background: linear-gradient(135deg, #0dcaf0 0%, #008fa8 100%);
+        color: white;
+        padding: 60px 20px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+    }
+    .privacy-content {
+        padding: 40px;
+        color: #444;
+        line-height: 1.8;
+    }
+    .privacy-section {
+        margin-bottom: 35px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+    .privacy-section:last-child {
+        border-bottom: none;
+    }
+    .section-title {
+        color: #212529;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .section-title i {
+        color: #0dcaf0;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+    .last-updated {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+</style>
+
+<div class="container privacy-container">
+    <div class="card privacy-card shadow-sm">
+        <div class="privacy-header shadow">
+            <h1 class="display-5 fw-bold mb-2">Privacy Policy</h1>
+            <p class="last-updated">နောက်ဆုံးပြင်ဆင်သည့်ရက်စွဲ - ဇန်နဝါရီ ၂၀၊ ၂၀၂၆</p>
+        </div>
+
+        <div class="privacy-content">
+            <p class="lead text-muted mb-5">
+                Traveler's Diary ကို အသုံးပြုသည့်အတွက် ကျေးဇူးတင်ပါသည်။ သင်၏ ကိုယ်ရေးအချက်အလက် လုံခြုံမှုသည် ကျွန်ုပ်တို့အတွက် အလွန်အရေးကြီးပါသည်။ ကျွန်ုပ်တို့သည် သင့်အချက်အလက်များကို မည်သို့စုဆောင်း၊ အသုံးပြုသည်ကို အောက်တွင် ပွင့်လင်းမြင်သာစွာ ဖော်ပြထားပါသည်။
+            </p>
+
+            <div class="privacy-section">
+                <h4 class="section-title"><i class="fas fa-info-circle"></i> ကျွန်ုပ်တို့ စုဆောင်းသော အချက်အလက်များ</h4>
+                <p>သင် Account ပြုလုပ်သည့်အခါတွင် ကျွန်ုပ်တို့သည် အောက်ပါအချက်အလက်များကို ရယူနိုင်ပါသည် -</p>
+                <ul>
+                    <li>နာမည် နှင့် အသုံးပြုသူအမည် (Username)</li>
+                    <li>အီးမေးလ်လိပ်စာ (Email Address)</li>
+                    <li>သင်တင်သော ပုံများနှင့် ဆောင်းပါးများ</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h4 class="section-title"><i class="fas fa-shield-alt"></i> အချက်အလက်များကို အသုံးပြုပုံ</h4>
+                <p>စုဆောင်းရရှိသော အချက်အလက်များကို အောက်ပါကိစ္စရပ်များအတွက်သာ အသုံးပြုပါသည် -</p>
+                <ul>
+                    <li>သင်၏ Account ကို စီမံခန့်ခွဲရန် နှင့် ဝန်ဆောင်မှုပေးရန်</li>
+                    <li>သင်၏ ခရီးသွားမှတ်တမ်းများကို ဖော်ပြပေးရန်</li>
+                    <li>အရေးကြီးသော Update များနှင့် အသိပေးချက်များကို အီးမေးလ်မှတစ်ဆင့် ပေးပို့ရန်</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h4 class="section-title"><i class="fas fa-lock"></i> လုံခြုံရေး</h4>
+                <p>ကျွန်ုပ်တို့သည် သင့်အချက်အလက်များ ဆုံးရှုံးခြင်း၊ အလွဲသုံးစားလုပ်ခြင်းနှင့် ခွင့်ပြုချက်မရှိဘဲ ရယူခြင်းတို့မှ ကာကွယ်ရန် ခေတ်မီ နည်းပညာစနစ်များကို အသုံးပြု၍ အကောင်းဆုံး ထိန်းသိမ်းထားပါသည်။</p>
+            </div>
+
+            <div class="privacy-section">
+                <h4 class="section-title"><i class="fas fa-cookie-bite"></i> Cookies အသုံးပြုမှု</h4>
+                <p>ကျွန်ုပ်တို့၏ Website ပေါ်တွင် အသုံးပြုသူ၏ အတွေ့အကြုံ ပိုမိုကောင်းမွန်စေရန် Cookies များကို အသုံးပြုပါသည်။ သင်သည် Cookies အသုံးပြုမှုကို Browser setting မှတစ်ဆင့် ပိတ်ထားနိုင်ပါသည်။</p>
+            </div>
+
+            <div class="mt-5 p-4 bg-light rounded-4 text-center">
+                <h5 class="fw-bold mb-2">မေးမြန်းလိုသည်များ ရှိပါသလား?</h5>
+                <p class="text-muted small">ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒများနှင့် ပတ်သက်၍ သိလိုသည်များရှိပါက ဆက်သွယ်နိုင်ပါသည်။</p>
+                <a href="{% url 'blog-contact' %}" class="btn btn-outline-info rounded-pill px-4 mt-2">Contact Support</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

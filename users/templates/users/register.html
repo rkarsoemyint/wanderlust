@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %} {% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Join Traveler’s Diary</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        
+                        <div class="d-grid gap-2 mt-4">
+                            <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-muted">
+                        Already Have An Account? <a class="ml-2" href="#">Log In</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

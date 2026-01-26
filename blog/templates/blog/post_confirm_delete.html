@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card p-4">
+        <h2>Delete Post?</h2>
+        <p>Are you sure you want to delete "{{ post.title }}"?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">Yes, Delete</button>
+            <a class="btn btn-secondary" href="{% url 'post-detail' post.pk %}">Cancel</a>
+        </form>
+    </div>
+{% endblock %}
