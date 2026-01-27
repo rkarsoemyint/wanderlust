@@ -63,7 +63,6 @@ def post_detail(request, pk):
             
             comment.save()
             messages.success(request, "Comment added!")
-            # Comment ပေးပြီးရင် မူလနေရာပြန်ရောက်အောင် # ထည့်ထားပါတယ်
             return redirect(reverse('post-detail', kwargs={'pk': post.pk}) + '#comment-section')
     else:
         form = CommentForm()
