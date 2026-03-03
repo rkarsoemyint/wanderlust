@@ -1,14 +1,14 @@
 import os
 from pathlib import Path
-import dj_database_url # ဒီကောင် သုံးဖို့ requirements.txt မှာ dj-database-url ပါရပါမယ်
+import dj_database_url 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY ---
-# Render မှာ ထည့်ခဲ့တဲ့ SECRET_KEY ကို ဖတ်ပါမယ်၊ မရှိရင် လက်ရှိ key ကို သုံးပါမယ်
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-iw_n+@$t!y0j2o$w0209%9%7l-lfom(a_(u02y(275v5)yj8r3')
 
-# Render ပေါ်မှာ DEBUG ကို False လုပ်ဖို့ လိုပါတယ်
+
 DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
@@ -39,7 +39,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # --- MIDDLEWARE ---
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # WhiteNoise ကို ဒီနေရာမှာပဲ ထည့်ပါ
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -68,7 +68,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'wanderlust.wsgi.application'
 
 # --- DATABASE ---
-# Render ရဲ့ PostgreSQL နဲ့ ချိတ်ဖို့ ပြင်ဆင်ထားပါတယ်
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///db.sqlite3',
@@ -90,9 +89,9 @@ USE_TZ = True
 
 # --- STATIC & MEDIA FILES ---
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Production အတွက် ဒါ လိုအပ်ပါတယ်
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# WhiteNoise အတွက် compression settings
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
@@ -103,6 +102,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGOUT_REDIRECT_URL = 'login'
+
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dfopufbtg',
