@@ -23,8 +23,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic', # Static files အတွက် ထည့်ပေးရပါမယ်
+    'whitenoise.runserver_nostatic',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'users', 
     'blog',
     'crispy_forms',
@@ -101,3 +103,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGOUT_REDIRECT_URL = 'login'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dfopufbtg',
+    'API_KEY': '576687434536761',
+    'API_SECRET': 'rguXB66aW_elpvVX37XtvpqnqJU'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
