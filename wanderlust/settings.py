@@ -105,9 +105,9 @@ LOGOUT_REDIRECT_URL = 'login'
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dfopufbtg',
-    'API_KEY': '576687434536761',
-    'API_SECRET': 'rguXB66aW_elpvVX37XtvpqnqJU'
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'dfopufbtg'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY', '576687434536761'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET', 'rguXB66aW_elpvVX37XtvpqnqJU'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
